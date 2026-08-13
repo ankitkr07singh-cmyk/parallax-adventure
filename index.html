@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A playful interactive parallax scrolling experience.">
+  <title>Drift — A Parallax Adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress"><span></span></div>
+  <div class="cursor"></div>
+
+  <header class="nav">
+    <a class="brand" href="#home"><span>✦</span> DRIFT</a>
+    <nav>
+      <a href="#home">START</a>
+      <a href="#forest">FOREST</a>
+      <a href="#ocean">OCEAN</a>
+      <a href="#sky">SKY</a>
+    </nav>
+    <button class="sound" id="soundBtn" aria-label="Toggle ambient sound">◌</button>
+  </header>
+
+  <main>
+    <section class="hero scene" id="home">
+      <div class="hero-bg layer" data-speed="0.10"></div>
+      <div class="stars layer" data-speed="0.18"></div>
+      <div class="moon layer" data-speed="0.28"></div>
+      <div class="mountain far layer" data-speed="0.38"></div>
+      <div class="mountain near layer" data-speed="0.58"></div>
+      <div class="cloud cloud-a layer" data-speed="0.72"></div>
+      <div class="cloud cloud-b layer" data-speed="0.48"></div>
+
+      <div class="hero-content layer" data-speed="0.62">
+        <p class="eyebrow">AN INTERACTIVE SCROLLING STORY</p>
+        <h1>GO<br><em>DEEPER.</em></h1>
+        <p class="hero-copy">A tiny digital adventure built to make scrolling feel like travelling through another world.</p>
+        <a class="scroll-cta" href="#forest">BEGIN THE JOURNEY <span>↓</span></a>
+      </div>
+      <div class="scroll-hint">SCROLL<br><span>↓</span></div>
+    </section>
+
+    <section class="forest scene" id="forest">
+      <div class="forest-sky layer" data-speed="0.12"></div>
+      <div class="sun layer" data-speed="0.25"></div>
+      <div class="mountains-green far layer" data-speed="0.30"></div>
+      <div class="mountains-green mid layer" data-speed="0.48"></div>
+      <div class="trees back layer" data-speed="0.62"></div>
+      <div class="trees front layer" data-speed="0.82"></div>
+
+      <div class="section-copy forest-copy layer" data-speed="0.58">
+        <span class="number">01</span>
+        <p class="eyebrow">THE FOREST</p>
+        <h2>WANDER<br><em>WILD.</em></h2>
+        <p>Every layer moves at a different rhythm. The farther you look, the slower the world becomes.</p>
+      </div>
+
+      <div class="discovery-card">
+        <span>FIELD NOTE 01</span>
+        <h3>LOOK CLOSER</h3>
+        <p>Hover the trees. Follow the light. There is more here than first appears.</p>
+        <button class="discover" data-message="You found a hidden path ✦">DISCOVER</button>
+      </div>
+    </section>
+
+    <section class="ocean scene" id="ocean">
+      <div class="ocean-sky layer" data-speed="0.08"></div>
+      <div class="cloud ocean-cloud-a layer" data-speed="0.20"></div>
+      <div class="cloud ocean-cloud-b layer" data-speed="0.32"></div>
+      <div class="sunset layer" data-speed="0.25"></div>
+      <div class="island far layer" data-speed="0.38"></div>
+      <div class="island near layer" data-speed="0.55"></div>
+      <div class="wave wave-back layer" data-speed="0.62"></div>
+      <div class="wave wave-mid layer" data-speed="0.78"></div>
+      <div class="wave wave-front layer" data-speed="0.92"></div>
+
+      <div class="section-copy ocean-copy layer" data-speed="0.50">
+        <span class="number">02</span>
+        <p class="eyebrow">THE OCEAN</p>
+        <h2>FLOAT<br><em>FREELY.</em></h2>
+        <p>Move through an endless horizon where foreground waves race past distant islands.</p>
+      </div>
+
+      <div class="float-badge">
+        <span>DEPTH</span>
+        <strong>∞</strong>
+        <small>KEEP GOING</small>
+      </div>
+    </section>
+
+    <section class="sky scene" id="sky">
+      <div class="sky-gradient layer" data-speed="0.08"></div>
+      <div class="constellation layer" data-speed="0.22"></div>
+      <div class="big-orb layer" data-speed="0.36"></div>
+      <div class="orbital-ring layer" data-speed="0.48"></div>
+      <div class="comet layer" data-speed="0.68"></div>
+
+      <div class="section-copy sky-copy layer" data-speed="0.54">
+        <span class="number">03</span>
+        <p class="eyebrow">THE SKY</p>
+        <h2>KEEP<br><em>GOING.</em></h2>
+        <p>The final layer is not an ending. It is an invitation to keep exploring.</p>
+      </div>
+
+      <div class="orbit-card">
+        <span>TRANSMISSION</span>
+        <strong>YOU<br>MADE IT.</strong>
+        <button id="replay">REPLAY JOURNEY ↗</button>
+      </div>
+    </section>
+
+    <section class="finale">
+      <div class="final-glow"></div>
+      <p class="eyebrow">END OF THE TRAIL</p>
+      <h2>SCROLLING<br>SHOULD FEEL<br><em>ALIVE.</em></h2>
+      <p>Built with layers, motion and a little imagination.</p>
+      <a href="#home" class="back-top">↑ BACK TO THE BEGINNING</a>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
